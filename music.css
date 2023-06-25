@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, purple , #8b00ff);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+}
+
+/* -------------- */
+
+/* -------------- */
+
+.container .musiclist .logo{
+    text-align: center;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.container .musiclist .logo img{
+    width: 70px;
+}
+
+.musiclist{
+    background: #24292e;
+    /* border-right: 20px solid #1da1f2; */
+    width: 360px;
+    height: 100%;
+    padding: 25px 35px;
+    float: left;
+    overflow: scroll;
+    overflow-x: hidden !important;
+}
+
+.container .musiclist .ust{
+    color: #fff;
+    font-size: 18px;
+    font-family: 'roboto';
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.container .musiclist .ust span{
+    color: #e84242;
+}
+
+.musiclist::-webkit-scrollbar {
+    display: none;
+}
+
+.container .musiclist .row .symbol{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.container .musiclist .row .symbol img{
+    width: 60px;
+    height: 50px;
+}
+
+.container .musiclist .row{
+    display: flex;
+    background-color: #fff;
+    margin-top: 15px;
+    padding: 5px;
+    width: 330px;
+    margin-left: -20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container .musiclist .row .font{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.container .musiclist .row .font h3{
+    color: #000;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.container .musiclist .row .font h5{
+    color: gray;
+}
+
+.container .musiclist .row .icon i{
+    color: #000;
+    font-size: 23px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+/* --------------- */
+
+/* Music Application Start */
+.container .content{
+    box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.15),
+    -6px -6px -10px -1px rgba(255,255,255,0.7);
+    width: 1050px;
+    border-radius: 15px;
+    padding: 25px 110px;
+}
+
+.container .content .top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.container .content .top-bar .material-symbols-rounded{
+    font-size: 29px;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.15), 
+    -6px -6px -10px -1px rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    cursor: pointer;
+}
+
+.container .content .image-wrapper .music-image{
+    width: 420px;
+    height: 420px;
+    box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.15),
+    -6px -6px -10px -1px rgba(255,255,255,0.7);
+    border-radius: 50%;
+    margin-top: 25px;
+    padding: 7px;
+}
+
+.container .content .image-wrapper .music-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+    box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.15),
+    -6px -6px -10px -1px rgba(255,255,255,0.7);
+}
+
+.container .content .image-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.container .content .music-titles{
+    text-align: center;
+    margin: 30px 0;
+    color: #000;
+}
+
+.container .content .music-titles .name{
+    font-size: 19px;
+}
+
+.container .content .music-titles .artist{
+    font-size: 17px;
+    margin-top: 3px;
+    opacity: 0.9;
+}
+
+.container .content .progress-details{
+    width: 100%;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #e3edf7;
+}
+
+.container .content .progress-details .progress-bar{
+    width: 10%;
+    height: inherit;
+    border-radius: inherit;
+    background-color: #0987f6;
+    cursor: pointer;
+    position: relative;
+}
+
+.container .content .progress-details .progress-bar span{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #0987f6;
+    border-radius: inherit;
+    transform: translateY(-25%);
+    right: -5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.container .content .progress-details:hover .progress-bar span{
+    opacity: 1;
+}
+
+.container .content .progress-details .time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2px;
+    color: #000;
+}
+
+.container .content .control-btn{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .content .control-btn span{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.15), 
+    -6px -6px -10px -1px rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.container .content .control-btn span:active{
+    box-shadow: inset 6px 6px 10px 1px rgba(0,0,0,0.15),
+    inset -6px -6px -10px -1px rgba(255,255,255,0.7);
+}
+
+/* Music Application End */
+
+/* Responsive Design Start */
+
+@media (max-width: 768px) {
+    html{
+        font-size: 55%;
+    }
+    .container{
+        display: flex;
+    }
+    .container .musiclist{
+        position: absolute;
+        height: calc(100vh - 0rem);
+        width: 100%;
+        z-index: 1;
+        top: -100%;
+        transition: 1.5s ease;
+    }
+    .container .musiclist.active{
+        top: 10%;
+    }
+    .container .musiclist .row{
+        width: 343px;
+    }
+    .container .musiclist .row .font h3{
+        font-size: 17px;
+    }
+    .container .musiclist .row .font h5{
+        font-size: 13px;
+    }
+    .container .content{
+        width: 400px;
+        height: 100vh;
+        padding: 20px 10px 10px 10px;
+    }
+    .container .content .top-bar .material-symbols-rounded{
+        width: 35px;
+        height: 35px;
+    }
+    .container .content .control-btn span{
+        width: 35px;
+        height: 35px;
+    }
+    .container .content .image-wrapper .music-image{
+        height: 370px;
+        width: 300px;
+    }
+    .container .content .control-btn .play-pause span{
+        width: 45px;
+        height: 45px;
+    }
+    .container .content .progress-details .time{
+        font-size: 15px;
+    }
+    /*
+    .container .musiclist .row{
+        display: flex;
+        height: 95px;
+    }
+    .container .musiclist .row .font h3{
+        font-size: 14px;
+    }
+    .container .musiclist .row .symbol img{
+        width: 50px;
+        height: 50px;
+    }
+    .container .musiclist .logo{
+        display: flex;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        margin-right: 3rem;
+    }
+    .container .musiclist .logo img{
+        width: 50px;
+        height: 50px;
+        margin-top: 2px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    */
+}
+
+/* Responsive Design End */
